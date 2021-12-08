@@ -1,18 +1,18 @@
 import {StyleSheet} from 'react-native';
 import spacing from '../../styles/spacing';
 import radius from '../../styles/radius';
-
 export default StyleSheet.create({
-  default_container: {
+  container: {
     margin: spacing.large,
-    padding: spacing.normal,
-    borderRadius: radius.smooth,
-    alignItems: 'center',
-    backgroundColor: '#37474f',
   },
-  default_text: {
-    fontWeight: 'bold',
-    fontSize: 12,
-    color: 'white',
+  input_container: {
+    backgroundColor: '#e0e0e0',
+    padding: spacing.normal,
+    borderRadius: radius.sharp,
+    borderWidth: 1,
+    borderColor: '#bdbdbd',
+  },
+  label: {
+    color: '#8d8d8d',
   },
 });

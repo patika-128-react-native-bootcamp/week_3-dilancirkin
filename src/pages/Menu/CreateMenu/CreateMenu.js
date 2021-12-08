@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useNavigation, useRoute} from '@react-navigation/core';
-import {SafeAreaView, Text} from 'react-native';
+import {Alert, SafeAreaView, Text} from 'react-native';
 
 import Input from '../../../components/Input';
 import Button from '../../../components/Button';
@@ -17,14 +17,18 @@ export default function CreateMenu() {
   const route = useRoute();
 
   function handleNavigateDetail() {
-    const fd = {
+    if (!name || !price || !description || !ingredients) {
+      Alert.alert('Uyarı', 'Gerekli yerler boş bırakılamaz');
+      return;
+    }
+    const foodDetail = {
       name: name,
       description: description,
       ingredients: ingredients,
       price: price,
     };
 
-    navigation.navigate('MenuDetailPage', {fd});
+    navigation.navigate('MenuDetailPage', {foodDetail});
   }
 
   return (
