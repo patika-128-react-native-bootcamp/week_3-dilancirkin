@@ -1,5 +1,6 @@
 import {Dimensions, StyleSheet} from 'react-native';
-
+import radius from '../../../styles/radius';
+import spacing from '../../../styles/spacing';
 export default StyleSheet.create({
   container: {
     flex: 1,
@@ -16,26 +17,26 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: 5,
+    padding: spacing.tiny,
   },
   description: {
-    margin: 5,
+    margin: spacing.tiny,
     fontSize: 12,
   },
   description_container: {
     flex: 1,
   },
   price: {
-    margin: 5,
+    margin: spacing.tiny,
     fontSize: 35,
     textAlign: 'right',
     fontWeight: 'bold',
   },
   badge_container: {
     backgroundColor: '#37474f',
-    margin: 3,
-    borderRadius: 10,
-    padding: 5,
+    margin: spacing.micro,
+    borderRadius: radius.soft,
+    padding: spacing.tiny,
   },
   badge_label: {
     fontSize: 10,

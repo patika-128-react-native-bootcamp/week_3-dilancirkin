@@ -1,5 +1,5 @@
 import {Dimensions, StyleSheet} from 'react-native';
-
+import spacing from '../../../styles/spacing';
 const deviceSize = Dimensions.get('window');
 
 export default StyleSheet.create({
@@ -10,7 +10,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
   },
   name_label: {
-    margin: 5,
+    margin: spacing.tiny,
     fontSize: 25,
     color: 'white',
     fontWeight: '200',

@@ -1,18 +1,19 @@
 import {StyleSheet, Dimensions} from 'react-native';
-
+import spacing from '../../../styles/spacing';
+import radius from '../../../styles/radius';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    margin: 10,
+    margin: spacing.normal,
     borderWidth: 2,
-    borderRadius: 10,
+    borderRadius: radius.soft,
   },
   image: {
     height: Dimensions.get('window').height / 6,
   },
   name_label: {
     fontWeight: 'bold',
-    margin: 5,
+    margin: spacing.tiny,
     textAlign: 'center',
     color: '#37474f',
   },
@@ -20,12 +21,12 @@ export default StyleSheet.create({
     backgroundColor: '#a5d6a7',
     fontWeight: 'bold',
     textAlign: 'center',
-    borderBottomLeftRadius: 7,
-    borderBottomRightRadius: 7,
+    borderBottomLeftRadius: radius.middle,
+    borderBottomRightRadius: radius.middle,
   },
   order: {
     fontWeight: 'bold',
-    margin: 5,
+    margin: spacing.tiny,
     fontSize: 10,
   },
 });
