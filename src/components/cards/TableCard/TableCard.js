@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  TouchableWithoutFeedback,
-  StyleSheet,
-  Dimensions,
-} from 'react-native';
+import {View, Text, TouchableWithoutFeedback, StyleSheet} from 'react-native';
 import styles from './TableCard.styles';
 
 export default function MenuCard({item, onSelect}) {
