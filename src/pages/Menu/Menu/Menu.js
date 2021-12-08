@@ -19,12 +19,10 @@ export default function Menu() {
   );
 
   return (
-    <View style={styles.container}>
-      <SafeAreaView style={styles.container}>
-        <View>
-          <FlatList data={mockData.menu} renderItem={renderMenu} />
-        </View>
-      </SafeAreaView>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <View>
+        <FlatList data={mockData.menu} renderItem={renderMenu} />
+      </View>
+    </SafeAreaView>
   );
 }
