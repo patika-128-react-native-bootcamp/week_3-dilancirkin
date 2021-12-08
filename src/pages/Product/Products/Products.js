@@ -8,17 +8,15 @@ export default function Products() {
   const navigation = useNavigation();
 
   function navigate(selectedProduct) {
-    navigation.navigate('PrdctDtlPage', {product: selectedProduct});
+    navigation.navigate('ProductDetailPage', {product: selectedProduct});
   }
+  const renderItem = ({item}) => (
+    <ProductCard item={item} onSelect={() => navigate(item)} />
+  );
 
   return (
     <SafeAreaView>
-      <FlatList
-        data={mockData.products}
-        renderItem={({item}) => (
-          <ProductCard item={item} onSelect={() => navigate(item)} />
-        )}
-      />
+      <FlatList data={mockData.products} renderItem={renderItem} />
     </SafeAreaView>
   );
 }
